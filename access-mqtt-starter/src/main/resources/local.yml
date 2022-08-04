@@ -1,0 +1,19 @@
+server:
+  port: 9090
+
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: rabbit
+    password: 12345678
+    virtual-host: iot
+
+biot:
+  access:
+    mq:
+      type: rabbit
+  mqtt:
+    broker: emqx
+    emqx:
+      host: tcp://127.0.0.1:2883

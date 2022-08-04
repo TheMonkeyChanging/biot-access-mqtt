@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: access-mqtt
+  cloud:
+    nacos:
+      config:
+        group: DEFAULT_GROUP
+        server-addr: 127.0.0.1:8848
+  config:
+    import:
+      #- optional:nacos:access-mqtt.yaml
+      - optional:local.yml # 本地配置
+
+#mybatis:
+#  mapper-locations: classpath*:mapper/**/*Mapper.xml
